@@ -7,15 +7,15 @@
 
     <div>
         <div>
-            <table>
+            <table class="table">
                 <thead>
                 <tr>
-                    <td>
+                    <th>
                         Nome do livro:
-                    </td>
-                    <td>
+                    </th>
+                    <th>
                         Descrição do livro:
-                    </td>
+                    </th>
                 </tr>
                 </thead>
                 <tbody>
@@ -28,13 +28,13 @@
                             {{$livro->txt_descricao_livro}}
                         </td>
                         <td>
-                            <a href="{{route('livros.edit', $livro->id)}}">Editar</a>
+                            <a href="{{route('livros.edit', $livro->id)}}" class="btn btn-primary">Editar</a>
                         </td>
                         <td>
                             <form method="POST" action="/livros/{{$livro->id}}">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit">Remover</button>
+                                <button type="submit" class="btn btn-danger">Remover</button>
                             </form>
                         </td>
                     </tr>
@@ -43,7 +43,7 @@
             </table>
         </div>
         <div>
-            <a href="{{route('livros.create')}}">Cadastrar Livros</a>
+            <a href="{{route('livros.create')}}" class="btn btn-success">Cadastrar Livros</a>
         </div>
     </div>
 @endsection
