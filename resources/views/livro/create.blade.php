@@ -1,3 +1,6 @@
+@extends('layout.master')
+
+@section('content')
 <h1>
     Cadastrar Livros
 </h1>
@@ -13,4 +16,4 @@
     </label>
     <button type="submit">Salvar</button>
 </form>
-
+@endsection
