@@ -30,6 +30,13 @@
                         <td>
                             <a href="{{route('livros.edit', $livro->id)}}">Editar</a>
                         </td>
+                        <td>
+                            <form method="POST" action="/livros/{{$livro->id}}">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit">Remover</button>
+                            </form>
+                        </td>
                     </tr>
                 @endforeach
                 </tbody>
