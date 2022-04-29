@@ -27,6 +27,9 @@
                         <td>
                             {{$livro->txt_descricao_livro}}
                         </td>
+                        <td>
+                            <a href="{{route('livros.edit', $livro->id)}}">Editar</a>
+                        </td>
                     </tr>
                 @endforeach
                 </tbody>
